@@ -6,13 +6,7 @@
 
 Atrapa todos los pokemones construyendo tu propia Pokédex.
 
-## Requerimientos
 
-- Accesibilidad como prioridad
-- Sube tu código a GitHub
-- Configuración de PWA
-- Publica tu resultado con github pages
-- Mándalo a revisión desde tu [perfil](https://leonidasesteban.com/estudiante)
 
 ## Desktop
 
