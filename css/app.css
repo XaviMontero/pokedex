@@ -3,7 +3,8 @@
 @import url('./header.css');
 @import url('./light.css');
 @import url('./stast.css');
-
+@import url('./sreen.css');
+@import url('./actions.css');
 :root {
   --white: #fffffe;
   --black: #300f16;

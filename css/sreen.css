@@ -1,0 +1,54 @@
+.screen{
+
+}
+
+.screen-border{
+display: flex;
+flex-direction: column;
+padding-inline: 1.5rem;
+padding-block-start:1.5rem ;
+background-color: var(--white);
+border-radius: 0.5rem;
+clip-path: polygon(0 0, 100% 0, 100% 100%, 2rem 100%, 0 calc(100% - 2.75rem));
+}
+
+.screen-safeArea{
+  padding: 1rem;
+  background-color: #8DB9DC;
+  border-radius: .25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  block-size: 10rem;
+  box-sizing: border-box;
+  background-size:cover;
+}
+
+.screen-detail{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  color: #8DB9DC;
+  align-items: stretch;
+}
+
+.screen-button{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding-block:1rem ;
+
+}
+.button{
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--primary);
+}
+
+
+.icon{
+   padding-block:1rem ;
+}
