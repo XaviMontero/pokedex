@@ -30,7 +30,7 @@ const $id = document.querySelector('#id-name');
 }
 
 export function isLoading(state= false){
-   const img = state ?'url(../img/loading.gif)' :'';
+   const img = state ?'url(https://firebasestorage.googleapis.com/v0/b/turismotambo.appspot.com/o/loading.gif?alt=media&token=6333c4b2-5c98-4f02-b3cd-840ba5920415)' :'';
    $screen.style.backgroundImage = img
 }
 
