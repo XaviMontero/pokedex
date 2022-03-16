@@ -6,6 +6,7 @@ const $prev = document.querySelector('#pre-pokemon');
 const $pokedex = document.querySelector('#pokedex');
 const $nextImg = document.querySelector('#next-imagen');
 const $prevImg = document.querySelector('#prev-imagen');
+const $random = document.querySelector('#random');
 
 
 $form.addEventListener ('submit', handleSubmit);
@@ -15,6 +16,7 @@ $prev.addEventListener ('click', handlePrevPokemon);
 
 $nextImg.addEventListener ('click', handleNextImg);
 $prevImg.addEventListener ('click', handlePrevImg);
+$random.addEventListener ('click', handleRandom);
 
 let activePokemon =null;
 let form = null
@@ -25,6 +27,11 @@ async function handleSubmit(event){
    form = new FormData($form);
    id = form.get('id');
   activePokemon = await renderPokemon(id);
+}
+
+async function handleRandom(event){
+  let random = Math.floor(Math.random() * (893 - 1)) + 12;
+  activePokemon = await renderPokemon(random);
 }
 
 async function handleNextPokemon(event){
@@ -50,7 +57,4 @@ function handlePrevImg(event){
 
 function changeImg(idImg){
   getImagen(activePokemon.sprites[idImg]);
-}
-function setId(id){
-id.textContent= String(id+"");
 }

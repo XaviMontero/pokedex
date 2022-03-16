@@ -5,7 +5,8 @@ import {createChart} from'./charts.js';
 const $imagen = document.querySelector ('#imagen');
 const $description = document.querySelector('#description-pokemon');
 const $screen = document.querySelector('#screen');
-const $ligth = document.querySelector('#ligth')
+const $ligth = document.querySelector('#ligth');
+const $id = document.querySelector('#id-name');
  async function getPokemonById(id){
   const pokemon = await getPokemon(id);
   const sepecies =await getSepecies(id);
@@ -35,10 +36,12 @@ export function isLoading(state= false){
 
 export async function renderPokemon(id){
 isLoading(true);
+getImagen('');
 const pokemon = await getPokemonById(id);
+await getImagen(pokemon.img)
 isLoading(false);
-getImagen(pokemon.img)
 setDescription(pokemon.description);
+setId(pokemon.id)
 speech(pokemon.name + ". " + pokemon.description);
 
 if (activeChart instanceof Chart){
@@ -47,8 +50,10 @@ if (activeChart instanceof Chart){
 activeChart = createChart(pokemon.stats);
 return pokemon;
 }
+
 let activeChart = null;
-export function getImagen(url){
+
+export async function getImagen(url){
   $imagen.src = url;
 }
 
@@ -64,4 +69,8 @@ function speech(text){
   $ligth.classList.add('is-animate');
 
   utterance.addEventListener('end', ()=>$ligth.classList.remove('is-animate'))
+}
+
+function setId(id){
+  $id.value = id;
 }
