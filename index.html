@@ -15,7 +15,7 @@
     <section class="pokedex-main" aria-label="Info general del pokemon">
       <div class="header-shadow">
         <div class="header">
-          <span class="light is-big is-sky is-animate"></span>
+          <span class="light is-big is-sky" id="ligth"></span>
           <span class="light is-red"></span>
           <span class="light is-yellow"></span>
           <span class="light is-green"></span>
@@ -62,11 +62,12 @@
     <div class="cover-front"> cover front</div>
     <section class="cover-back" aria-label="Estadisticas del Pokemon">
       <div class="stast">
-        stast
+        <canvas id="stats" ></canvas>
       </div>
     </section>
 
   </main>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
   <script src="./js/index.js" type="module"></script>
 </body>
 

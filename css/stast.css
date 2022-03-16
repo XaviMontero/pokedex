@@ -3,4 +3,16 @@
   padding: 1rem;
   border-radius: .5rem;
   flex-grow: 1;
+  flex-wrap: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#stats{
+  flex-wrap: 1;
+  display: flex;
+  inline-size: 100%;
+  min-block-size: 90%;
+
 }
