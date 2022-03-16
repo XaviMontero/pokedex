@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <main class="pokedex" tabindex="0">
+  <main class="pokedex" tabindex="0" id ="pokedex">
     <section class="pokedex-main" aria-label="Info general del pokemon">
       <div class="header-shadow">
         <div class="header">
@@ -24,7 +24,8 @@
 
       <div class="screen">
         <div class="screen-border">
-          <div class="screen-safeArea">
+          <div class="screen-safeArea" id="screen">
+            <img src="" alt="" id="imagen">
           </div>
           <div class="screen-detail">
             <div class="screen-button">
@@ -50,7 +51,7 @@
             <button id="prev-imagen"  class="navigation-up" aria-label="Anterior Pokemon"></button>
           </div>
           <div class="description">
-            <p>
+            <p id="description-pokemon">
               Busca un pokémon para conocer todos sus características.
             </p>
           </div>
@@ -66,7 +67,7 @@
     </section>
 
   </main>
-
+  <script src="./js/index.js" type="module"></script>
 </body>
 
 </html>
